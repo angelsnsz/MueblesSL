@@ -1,5 +1,6 @@
 import features.Client;
 
+import java.util.List;
 import java.util.Scanner;
 import services.ClientService;
 
@@ -68,7 +69,10 @@ public class Main {
     }
 
     private static void listarClientes(ClientService clientService) {
-
+        List<Client> listaClientes =clientService.obtenerTodosLosClientes();
+        for (int i=0;i<listaClientes.size();i++){
+            System.out.println(listaClientes.get(i));
+        }
     }
 
     private static void altaCliente(ClientService clientService) {

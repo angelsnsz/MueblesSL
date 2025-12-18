@@ -18,17 +18,21 @@ public class ClientService {
 
     public List<Client> obtenerTodosLosClientes() {
         // To be implemented
+        return repository.getAllClients();
     }
 
     public void crearCliente(Client client) {
         // Implementar la lógica de creación, validar antes que el nif viene relleno.
+        repository.addClient(client);
     }
 
     public void eliminarCliente(String nif) {
         // To be implemented
+        repository.deleteClient(nif);
     }
 
     public void modificarCliente(Client client) {
         // To be implemented
+        repository.updateClient(client);
     }
 }
